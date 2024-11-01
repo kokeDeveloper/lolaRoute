@@ -61,19 +61,20 @@ if (count && count > 0) posts = posts.slice(0, count);
 const sizes = getGridImageSizes(container);
 ---
 
-<Intersecting client:visible className="w-full">
+<Intersecting noSsr client:visible className="w-full">
   <div
     class={`recent-blogs grid gap-8 fade-up container-${container || "md"} `}
   >
     {
       template === "grid" && (
         <>
+        <div class="py-10">
           <h2 class="title-sm" id={slugify(title)}>
             {title}
           </h2>
           {content && <div class="richtext" set:html={marked.parse(content)} />}
           <div
-            class={`auto-grid-${container || "md"} gap-4`}
+            class={`auto-grid-${container || "md"} gap-4 py-10`}
             data-pagefind-ignore="all"
           >
             {posts.map((post, index) => (
@@ -99,6 +100,7 @@ const sizes = getGridImageSizes(container);
               </span>
             </a>
           </div>
+        </div>
         </>
       )
     }
