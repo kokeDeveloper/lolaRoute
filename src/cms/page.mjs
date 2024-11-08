@@ -74,7 +74,7 @@ export const page = {
           name: "hero_template",
           label: t("hero_template"),
           widget: "select",
-          options: ["plain", "image"],
+          options: ["plain", "image", "video"],
           default: "image",
           condition: {
             field: "style.template",
