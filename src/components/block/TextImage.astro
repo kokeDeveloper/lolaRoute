@@ -49,7 +49,7 @@ const columnClass = () => {
 const animation = `image_${animate ? imageName : Math.random()}`;
 ---
 
-<Intersecting client:visible className="w-full">
+<Intersecting noSsr client:visible className="w-full">
   <div
     class={`container-${container} ${columnClass()} text-image gap-8 text-image__${template} ${
       reverse ? "reverse" : "normal"

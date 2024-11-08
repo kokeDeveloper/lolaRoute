@@ -28,7 +28,7 @@ if (container === "sm")
   sizes = "(min-width: 640px) calc(55rem / 3 - 0.66rem), calc(50vw - 2.5rem)";
 ---
 
-<Intersecting className="w-full" client:visible>
+<Intersecting noSsr className="w-full" client:visible>
   <div class={`container-${container} gap-8 grid`}>
     <h2 class="title-sm fade-in">{title}</h2>
     <div class={`image-grid-${container}`}>

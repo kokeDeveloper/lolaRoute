@@ -28,7 +28,7 @@ const isSvg = !isPixelBasedImage(ext);
 
 {
   !isSvg && (
-    <Intersecting client:visible>
+    <Intersecting noSsr client:visible>
       <a
         href={`/images/${imgAlt}`}
         class="img fade-up block"
